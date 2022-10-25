@@ -33,5 +33,13 @@ node {
 			}
 		}
 		*/
+		stage('deliver'){
+			if(env.BRANCH_NAME=='master'){
+				docker.withRegistry('', 'dockerhub_token')
+				def myImage = docker.build("royggy/ui:${env.BUILD_ID}")
+				myImage.push()
+				myImage.push('latest')
+			}
+		}
 	}
 }
