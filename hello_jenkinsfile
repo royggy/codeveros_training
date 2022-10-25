@@ -1,6 +1,5 @@
 node {
-	//checkout repo branch
-	checkout 
+	checkout
 	stage('Build'){
 		echo 'Hello World'
 	}
