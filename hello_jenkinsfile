@@ -1,5 +1,14 @@
 node {
+	//checkout repo branch
+	checkout 
 	stage('Build'){
 		echo 'Hello World'
+	}
+	stage('Lint'){
+		try{
+			echo 'linting'
+		} catch{
+			echo 'Failed linting' + e.toString()
+		}
 	}
 }
