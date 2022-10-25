@@ -7,7 +7,7 @@ node {
 	stage('Lint'){
 		try{
 			echo 'linting'
-		} catch{
+		} catch (Exception e){
 			echo 'Failed linting' + e.toString()
 		}
 	}
