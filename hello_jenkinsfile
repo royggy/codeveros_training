@@ -19,6 +19,7 @@ node {
 		stage('Build'){
 			echo 'Hello World'
 		}
+		/*
 		stage('Lint'){
 			try{
 				echo 'linting'
@@ -31,5 +32,6 @@ node {
 				sh 'npm run test --cache="./npm"'
 			}
 		}
+		*/
 	}
 }
